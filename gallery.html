@@ -1,33 +1,103 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Web Page</title>
-<link href="css/reset.css" rel="stylesheet" type="text/css" media="screen">
-<link href="css/main.css" rel="stylesheet" type="text/css" media="screen">
+  <meta charset="UTF-8">
+  <title>Liam's Automotives - Gallery</title>  
+  <link rel="stylesheet" href="css/main.css">  
 </head>
 <body>
-	<section id="topBar"></section><!--end topBar-->
-	<div id="siteContainer">
-    	<header id="mainHeader">
-        	<div id="logo"><p>Logo</p></div><!--end logo-->
-            <nav id="mainNav"><p>Nav</p></nav><!--end mainNav-->
-        </header><!--end mainHeader-->
-        <section id="promo">
-        	<div id="promoText"><p>Promo Text</p></div><!--end promoText-->
-        	<div id="promoImage"><p>Promo Image</p></div><!--end promoImage-->
-        </section><!--end promo-->
-        <section id="productInfo">
-        	<section class="productDesc"><p>Product Image &amp; Text</p></section><!--end productDesc1-->
-            <section class="productDesc"><p>Product Image &amp; Text</p></section><!--end productDesc2-->
-            <section class="productDesc"><p>Product Image &amp; Text</p></section><!--end productDesc3-->
-            <section class="productDesc"><p>Product Image &amp; Text</p></section><!--end productDesc4-->
-        </section><!--end productInfo-->
-        <footer id="mainFooter">
-        	<div id="footerNav"><p>Footer Nav</p></div><!--end FooterNav-->
-            <div id="copyRight"><p>Copyright Info</p></div><!--end Copyright-->
-        </footer><!--end mainFooter-->
-    </div><!--end siteContainer-->
-<script src="js/main.js"></script>    
+  <section id="topBar"></section>
+  <div class="container">
+    <h1 class="hidden">Akumal Snorkel Co.</h1>
+    <header class="mainHeader">
+      <div class="logoHeader">
+        <img src="images/Final_Logo.jpg" alt="Liam's Automotives Logo" id="logo">
+      </div>
+      <nav class="mainNav">
+        <h2 class="hidden">Main Navigation</h2>
+            <ul>
+               <li><a href="index.html">Home</a></li>
+               <li><a href="#">Cars</a></li>
+               <li><a href="#">Trucks</a></li>
+               <li class="selected"><a href="#">Gallery</a></li>
+               <li><a href="contact.html">Contact</a></li>
+            </ul>
+      </nav>
+    </header>
+      <div id="galleryContainer">
+        <section class="galleryText">
+        <p>
+          Here you can search and explore a variety of different vehicles. You will find anything<br>
+          from new cars, to top quality used and slighlty used cars, all with pristine, and cleaned<br>
+          interiors waiting for you. Every vehicle you find here is also well equipped for any<br>
+          climate or weather. With all vehicles coming with all season or winter tires for the<br>
+          harsh winters.
+          <br><br>
+          This page is for discoving something you might be interest in, but if you already know<br>
+          what you’re looking for you can browse a specific catagory, such as the Cars and SUV’s<br>
+          page if you’re looking for something small and reliable. Or you can go to the Trucks<br>
+          page if you’re interested in something a little bit (or a lot) bigger.<br>
+       </section>
+
+       <section id="truckTire">
+        <p>Discover a vehicle you’re interested in today! All vehicles are ready for any season, so what are you waiting for?</p>
+        <img src="images/Truck_Tire.jpg" alt="Truck Front Tire">
+      </section>
+      </div>
+        <section id="mainGallery"> <!--start mainGallery-->
+            <section class="galleryImageCon"> <!--start galleryImageCon-->
+            	<img src="images/Truck_Gallery.jpg" width="200" height="200" alt="Truck Gallery">
+                <a class="storeButton" href="#">View In Store</a>
+            </section><!--end galleryImageCon-->
+            <section class="galleryImageCon"> <!--start galleryImageCon-->
+            	<img src="images/Truck_Front1.jpg" width="200" height="200" alt="Truck Front GMC">
+                <a class="storeButton" href="#">View In Store</a>
+            </section><!--end galleryImageCon-->
+            <section class="galleryImageCon"> <!--start galleryImageCon-->
+            	<img src="images/Car_Gallery.jpg" width="200" height="200" alt="Car Gallery">
+                <a class="storeButton" href="#">View In Store</a>
+            </section><!--end galleryImageCon-->
+            <section class="galleryImageCon"> <!--start galleryImageCon-->
+            	<img src="images/Truck_Front2.jpg" width="200" height="200" alt="Truck Front RAM">
+                <a class="storeButton" href="#">View In Store</a>
+            </section><!--end galleryImageCon-->
+        </section><!--end mainGallery-->
+        
+        
+        
+    <footer class="mainFooter">
+      <nav class="footerNav">
+        <h2 class="hidden">Footer navigation</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Cars</a></li>
+             <li><a href="#">Trucks</a></li>
+            <li class="selected"><a href="#">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+      </nav> 
+
+      <div class="socialMedia">
+        <h2 class="hidden">Social Media</h2>
+        <ul id="iconNav">
+            <li id="youtube">
+              <a href="http://www.youtube.com">
+                <img src="images/Youtube.jpg" alt="Youtube">
+              </a>
+            </li>
+            <li id="twitter">
+              <a href="http://www.twitter.com">
+                <img src="images/Twitter.jpg" alt="Twitter">
+              </a>
+            </li>
+            <li id="facebook">
+              <a href="http://www.facebook.com">
+                <img src="images/Facebook.jpg" alt="Facebook">
+              </a>
+           </li>
+        </ul>
+      </div>     
+    </footer>
+    </div><!--end container-->
 </body>
 </html>
