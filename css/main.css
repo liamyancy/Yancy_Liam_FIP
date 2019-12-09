@@ -1,257 +1,542 @@
-@charset "UTF-8";
-/* CSS Document */
+/*basic reset*/
+/*browsers have built in values for elements so we'll reset a few things to zero*/
 
-/*Remove this rule, this is only for demo purposes to make the boxes black with white text
-The line height on the <p> tag gives each box a height value*/
-
-p
-{
-	color: #fff;
-	line-height: 100px;
-	background: #000;
-	text-align: center;
-	margin: 0;
+.box {
+  background-color: #8ea86e;
+  color: #fff;
+  text-align: center;
+  margin: 20px;
 }
 
-/*basic reset*/
-/*browsers have built in values for elements so we'll reset a few things to zero, you can add to this or remove items as needed*/
+div,p,body,header,footer,section,article,nav,h1,h2,h3,h4 { 
+margin: 0; 
+padding: 0; 
+} 
 
-div,p,body,header,footer,section,article,nav 
-{ 
-	margin: 0; 
-	padding: 0; 
-}	
-
-img 
-{ 
-	border: none; /*Remove border if image is a link*/
-	margin: 0; 
-	padding: 0; 
+img { 
+border: none; 
+margin: 0; 
+padding: 0; 
 }
 
 /*html selectors*/
 
-body 
-{
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 12px;
-	color: #333;
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  color: #000;
+  background-color: #ededed;
+  /*http://www.heropatterns.com/*/
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.184 20c.357-.13.72-.264 1.088-.402l1.768-.661C33.64 15.347 39.647 14 50 14c10.271 0 15.362 1.222 24.629 4.928.955.383 1.869.74 2.75 1.072h6.225c-2.51-.73-5.139-1.691-8.233-2.928C65.888 13.278 60.562 12 50 12c-10.626 0-16.855 1.397-26.66 5.063l-1.767.662c-2.475.923-4.66 1.674-6.724 2.275h6.335zm0-20C13.258 2.892 8.077 4 0 4V2c5.744 0 9.951-.574 14.85-2h6.334zM77.38 0C85.239 2.966 90.502 4 100 4V2c-6.842 0-11.386-.542-16.396-2h-6.225zM0 14c8.44 0 13.718-1.21 22.272-4.402l1.768-.661C33.64 5.347 39.647 4 50 4c10.271 0 15.362 1.222 24.629 4.928C84.112 12.722 89.438 14 100 14v-2c-10.271 0-15.362-1.222-24.629-4.928C65.888 3.278 60.562 2 50 2 39.374 2 33.145 3.397 23.34 7.063l-1.767.662C13.223 10.84 8.163 12 0 12v2z' fill='%23c8c8c8' fill-opacity='0.33' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
 
-
-/*a:link is for not visited(standard unclicked link), 
-a:visited is for visited, and just a applies to both.*/
+/*a:link is for not visited, a:visited is for visited, and just a applies to both.*/
 /*a will also style anchor links*/
 
-a:link, a:visited 
-{ 
- 	text-decoration:none; 	
+a:link, a:visited { 
+text-decoration:none; 
 }
 
-a:hover, a:active 
-{ 
-	text-decoration:none; 
-}
+a:hover, a:active { 
+text-decoration:none; 
+ }
 
 /*hide elements from browser but show for doc outline*/
 
 .hidden
 {
-	display: none;
+  display: none;
 }
 
-/*section is block level and no width specidied therefore stretches full screen*/
+/*-- End hidden --*/
+
 #topBar
 {
-	background-color: #000;
-	height: 20px;
+  background-color: #012a3b;
+  height: 20px;
 }
 
-/*Site Container*/
-/*This is essentially a box that we place the whole site in.  
-We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 20px (960px) so it fits on 1024x768 screens.*/
+/*-- Start Container --*/
 
-#siteContainer 
+.container
 {
-	margin: 0 auto;
-	width: 920px;
-	padding-left: 20px;
-	padding-right: 20px;
+  width: 980px;
+  margin: 0 auto;
+  background-color: #fff;
 }
 
-/*This is a flex container*/
-#mainHeader
+/*-- End Container --*/
+
+/*-- Start Header --*/
+
+.mainHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+ }
+
+.logoHeader
 {
-	margin-top: 40px;
-	padding-bottom: 40px;
-	display: flex;
-	flex-direction: row;
-  	justify-content: flex-start;
-	border-bottom: solid 1px #DDD;
+  width: 220px;
+  margin-top: 40px;
+  margin-bottom: 80px;
+  margin-left: 0;
 }
 
-/*This is a flex item*/
-#logo
+.mainNav
 {
-	width: 200px;
+  width: 500px;
+  height: 100px;
+  margin-top: 40px;
+  margin-left: auto;
+  background-color: #012a3b;
 }
 
-/*This is also a flex item*/
-/*We use margin left auto to send it all the way to the right*/
-#mainNav 
+.mainNav ul
 {
-	margin-left: auto;
-	width: 500px;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 40px;
+  text-align: center;
 }
 
-#promo 
+.mainNav ul li {  
+  font-size: 15px;
+  display: inline;
+  cursor: pointer;
+  margin-left: 25px;
+}
+
+.mainNav ul li a
 {
-	margin-top: 40px;
-	border-bottom: solid 1px #DDD;
-	padding-bottom: 40px;
-	display: flex;
-	flex-direction: row;
-  	justify-content: flex-start;
+  color: #fff;
+  padding: 5px;
 }
 
-/*Get rid of this, here just to give different height to promo*/
-#promo p 
+.mainNav ul li a:hover {
+  padding: 5px;
+  background-color: #345562;
+}
+
+.selected
 {
-	line-height: 250px;
+  padding: 5px 0px 5px 0px;
+  background-color: #345562;
 }
 
-#promoText 
+/*-- End Header --*/
+
+/*-- Start Header --*/
+
+.hero
 {
-	width: 600px;
+  height: 384px;
+  width: 980px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #012a3b;
 }
 
-#promoImage 
+
+/*
+.heroIndex {
+  background: url(../images/Truck_Banner.jpg) no-repeat bottom; 
+}
+
+.heroGallery {
+  background: url(../images/gallery_header.jpg) no-repeat bottom; 
+}
+
+.heroContact {
+  background: url(../images/contact_header.jpg) no-repeat bottom; 
+}
+*/
+.hero h2
 {
-	margin-left: auto;
-	width: 280px;
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: -1px;
+  text-align: center;
 }
 
-#productInfo 
+.hero h3
 {
-	margin-top: 40px;
-	display: flex;
-	flex-direction: row;
-  	justify-content: space-between;
-	border-bottom: solid 1px #DDD;
-	padding-bottom: 40px;
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+  font-weight:normal;
+  margin-bottom: 20px;
 }
 
-/*Get rid of this, here just to give different height to productInfo*/
-#productInfo p 
+/*-- End Hero --*/
+
+/*-- Start Index --*/
+
+.indexBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+
+.resources
 {
-	line-height: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 0;
 }
 
-.productDesc 
+.resources p
 {
-	width: 200px;
+  width: 275px;
+  height: 50px;
+  line-height: 22px;
+  color: #fff;
+  font-size: 15px;
+  background-color: #012a3b;
+  padding-left: 5px;
 }
 
-#mainFooter 
+.packages, .fish, .donations
 {
-	margin-top: 40px;
-	margin-bottom: 40px;
-	display: flex;
-	flex-direction: row;
-  	justify-content: flex-start;
+  color: #fff;
+  width: 300px;
+  margin-right: 50px;
 }
 
-#footerNav 
+/*
+.indexBanner {
+  margin-top: 80px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.indexBanner p {
+  background-color: #012a3b;
+  margin-left: auto;
+  color: #fff;
+}*/
+
+.indexBanner {
+  margin-top: 80px;
+}
+
+.bannerText {
+  color: #fff;
+  position: absolute;
+  top: 575px;
+  left: 1070px;
+}
+
+
+.resBut
 {
-	width: 500px;
+  display: block;
+  width: 100px;
+  padding: 15px;
+  color: #FFF;
+  background-color: #61a3c1;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 15px;
+  font-weight: bold;
 }
 
-#copyRight 
+.resBut:hover
 {
-	margin-left: auto;
-	width: 310px;
+  background-color: #3f6e84;
 }
 
-/*Page 2 - Notice we are using one style sheet for all of the pages*/
-
-#contentCon {
-	margin-top: 40px;
-	border-bottom: solid 1px #DDD;
-	padding-bottom: 40px;
-	display: flex;
-	flex-direction: row;
-  	justify-content: flex-start;
+.testimonialCon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 20px;
 }
 
-/*Get rid of this, here just to give different height to promo*/
-#contentCon p 
+.testimonial
 {
-	line-height: 630px;
+  background-color: #efefef;
+  width: 460px;
+  height: 170px;
+  margin-bottom: 20px;
 }
 
-#content1 
+.testimonial p
 {
-	width: 440px;
+  margin-top: 20px;
+  line-height: 22px;
+  color: #666;
+  font-size: 15px;
 }
 
-#content2 
+.testImage
 {
-	margin-left: auto;
-	width: 440px;
+  float: left;
+  margin-top: 20px;
+  margin-left: 15px;  
+  margin-right: 10px;
 }
 
-/*Page 3*/
-
-#productImages 
+.testimonialName
 {
-	margin-top: 40px;
-	border-bottom: solid 1px #DDD;
-	padding-bottom: 40px;
-	display: flex;
-	flex-direction: row;
-  	justify-content: space-between;
+  display: block;
+  font-weight:bold;
+  margin-top: 15px;
+  color: #61a3c1;
 }
 
-/*Get rid of this, here just to give different height*/
-#productImages p
-{
-	line-height: 250px;
+/*-- End Index --*/
+
+ /*Gallery Page*/
+
+ #galleryContainer {
+  width: 980px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+ }
+
+.galleryText {
+  width: 600px;
+  height: 250px;
+  background-color: #012a3b;
+  color: #fff;
+  padding: 10px 0px 0px 10px;
 }
 
-.productImg 
-{
-	width: 280px;
+#truckTire {
+  width: 280px;
+  height: 250px;
+  background-color: #012a3b;
+  margin-left: auto;
+}
+
+#truckTire p {
+   color: #fff;
+   padding-bottom: 40px;
+   padding-left: 10px;
+   padding-top: 10px;
 }
 
 
-#contentAreaBig
-{
-	margin-top: 40px;
-	border-bottom: solid 1px #DDD;
-	padding-bottom: 40px;
+
+#mainGallery {
+  padding-top: 80px;
+  margin-left: 0px;
+  width: 980px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-/*Get rid of this, here just to give different height*/
-#contentAreaBig p 
-{
-	line-height: 300px;
+#mainGallery h2 {
+  font-size: 15px;
+  width: 940px;
+  color: #2073a8;
+  background-color: #ddeff7;
+  margin-bottom: 40px;
+  padding: 8px 0px 8px 5px;
+
 }
 
-#promoImageBig
-{
-	width: 920px;
+.galleryImageCon {
+  width: 200px;
+  height: 300px;
+  background-color: #012a3b;
+  margin-bottom: 40px;
+}
+
+.galleryImageCon a {
+  display: block;
+  width: 130px;
+  height: 45px;
+  text-align: center;
+  margin-top: 15px;
+  margin-left: 25px;
+  color: #000;
+  font-weight: bold;
+  padding: 15px 10px 0px 10px;
+  background-color: #fff;
+  font-size: 15px;
+}
+
+/*-- End Gallery --*/
+
+/*-- Contact Page --*/
+
+#mainContact {
+  width: 940px;
+  padding-top: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+#mainContact h2 {
+  font-size: 15px;
+  color: #2073a8;
+  background-color: #ddeff7;
+  margin-bottom: 40px;
+  padding: 8px 0px 8px 5px;
+  width: 940px;
+}
+
+#contactArea {
+  width: 410px;
+  margin-top: 45px;
 }
 
 
-/*Page 4*/
-
-.productDescLargeLeft 
-{
-	width: 410px;
+#contactText {
+  font-size: 15px;
+  margin-left: 15px;
+  padding-bottom: 0px;
+  width: 340px;
 }
 
-.productDescLargeRight 
-{
-	width: 410px;
+#contactForm {
+  margin-top: 10px;
+  padding-left: 15px;
+  padding-top: 15px;
+  background-color: #012a3b;
+  height: 300px;
+  width: 410px;
+  color: #fff;
 }
 
+fieldset {
+  border: none;
+  padding: 0px;
+}
+
+
+input, textarea  {
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 375px;
+  height: 30px;
+  background-color: #efefef;
+  display: block;
+  border: 1px solid #999;
+  color: #333;
+}
+
+#comments {
+  max-height: 60px;
+  height: 30px;
+  width: 375px;
+  max-width: 375px;
+  min-width: 375px;
+}
+
+#submit {
+  display: block;
+  width: 130px;
+  height: 45px;
+  text-align: center;
+  margin-top: 30px;
+  color: #000;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #fff;
+  font-size: 15px;
+}
+
+#mapArea h3 {
+  font-size: 15px;
+  margin-top: 45px;
+  margin-left: 120px;
+  color: #000;
+}
+
+.mapArea {
+  margin-top: 10px;
+  padding-left: 120px;
+  height: 315px;
+  width: 410px;
+  color: #fff;
+}
+
+.mapArea {
+
+}
+
+/*-- Start Footer --*/
+
+.mainFooter {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  justify-content: flex-start;
+  height: 125px;
+}
+
+.footerNav {
+  width: 500px;
+  height: 100px;
+  margin-top: 40px;
+  margin-left: 0;
+  background-color: #012a3b;
+}
+
+.footerNav ul {
+  padding: 0;
+  list-style-type: none;
+  margin-top: 40px;
+  width: 500px;
+  text-align: center;
+}
+
+.footerNav ul li { 
+  cursor: pointer;
+  display: inline;
+  margin-right: 25px;
+  font-size: 15px;  
+}
+
+.footerNav ul li a {
+  color: #fff;
+  padding: 5px;
+}
+
+.footerNav ul li a:hover {
+  background-color: #345562;
+}
+
+.socialMedia {
+  height: 100px;
+  width: 310px;
+  margin-left: auto;
+  margin-top: 40px;
+  background-color: #012a3b;
+}
+
+#iconNav img {
+  justify-content: space-evenly;
+  margin-top: 24px;
+  padding: 6px;
+}
+
+#iconNav {
+  list-style: none;
+  margin: 0;
+}
+
+#iconNav li {
+  display: inline;
+  margin-right: 10px;
+}
+
+/*-- End Footer --*/
