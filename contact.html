@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Liam's Automotives - Contact</title>  
-  <link rel="stylesheet" href="css/main.css">  
+  <link rel="stylesheet" href="css/reset.css" media="screen"> 
+  <link rel="stylesheet" href="css/main.css" media="screen">  
 </head>
 <body>
-  <section id="topBar"></section>
+  <section id="topBar"><h2 class="hidden">Top Bar</h2></section>
   <div class="container">
-    <h1 class="hidden">Akumal Snorkel Co.</h1>
+    <h1 class="hidden">Liam's Automotives - Contact</h1>
     <header class="mainHeader">
+      <h2 class="hidden">Header</h2>
       <div class="logoHeader">
         <img src="images/Final_Logo.jpg" alt="Liam's Automotives Logo" id="logo">
       </div>
@@ -27,9 +29,10 @@
     <main>
       <img src="images/Contact_Banner.jpg">
         <section id="mainContact"> <!--start mainGallery-->
+          <h2 class="hidden">Contact Area</h2>
           <section id="contactArea"><!--start contactArea-->
-                <h2 class="hidden">Contact form</h2>
-                <h3 id="contactText">Contact Us!</h3>
+                <h2 class="hidden">Contact Form</h2>
+                <h3 id="contactText">Contact Us</h3>
             <form id="contactForm" action="form.php" method="post">
                     <label for="name">Name:</label>
                     <input type="text" required id="name" name="fullName" size="30" placeholder=" Enter your name">
@@ -40,9 +43,8 @@
                     <input id="submit" type="submit" value="Submit">
             </form>
           </section><!--end contactArea-->  
-            
-            <section id="mapArea"><!--start mapArea-->
-              <h3>Visit Us</h3>    
+            <section class="mapArea"><!--start mapArea-->
+              <h3>Map</h3>    
                 <iframe class="mapArea" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23331.737821632647!2d-80.89713851403532!3d43.03160003576263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882e9c17199e8415%3A0x5037b28c7231e60!2sIngersoll%2C%20ON!5e0!3m2!1sen!2sca!4v1575851871122!5m2!1sen!2sca" width="410" height="300" frameborder="1" style="border:0;" allowfullscreen=""></iframe>            
             </section><!--end mapArea-->      
         </section><!--end mainContact-->
@@ -58,7 +60,6 @@
             <li class="selected"><a href="#">Contact</a></li>
           </ul>
       </nav> 
-
       <div class="socialMedia">
         <h2 class="hidden">Social Media</h2>
         <ul id="iconNav">
